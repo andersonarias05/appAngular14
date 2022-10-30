@@ -11,6 +11,79 @@ export class AppComponent {
   constructor() {
     console.log('hi');
     
+    //Operator Splice
+	  const A = ['a','b','c','d','e'];
+	  const auxSplice = A.splice(1,1)
+	  console.log('auxSplice:', A, auxSplice)
+	
+	  //Operator Reduce
+	  const auxReduce = [1,2,3,4,5].reduce((prev, value, index) => prev + value, 0)
+	  console.log("auxReduce: ", auxReduce)
+	
+	  //JSON Operators
+	  const auxJson = {id: 1, name: 'Juan', lastName: 'Perez'};
+	
+    //Entries, Keys, Values
+    const auxEntries = Object.entries(auxJson)
+    console.log("auxEntries: ", auxEntries)
+    
+    const auxKeys = Object.keys(auxJson)
+    console.log("auxEntries: ", auxEntries)
+    
+    const auxValues = Object.values(auxJson)
+    console.log("auxEntries: ", auxEntries)
+	
+    //CONST
+    //LET
+    const a = 1
+    console.log('CONST:', a)
+    
+    for(let i=1; i<=5; i++) {
+      //console.log('INDEX:', i)
+    }
+    
+    for(let i=1; i<=5; i++) {
+      //console.log('INDEX:', i)
+    }
+    
+    for(let i=1; i<=5; i++) {
+      //console.log('INDEX:', i)
+    }
+
+    //Spread Operator
+    const b = [1,2,3,4,5,6]
+    const c = [...b,7,8,9,10]
+    console.log("SPREAD", c)
+	
+    //Rest Operator
+    this.getRest(1,2, 'hola')
+	
+    const person = {
+      id: 1, name: 'Juan', country: {idCountry:1, cod: 'LP'}
+    }
+
+    //DESESTRUCTURACION
+    //const C = person.country
+    //const ID = person.id
+	
+    const {country, id} = person;
+    console.log('country:', country)
+
+    const data = {
+      0: {id:1, name: 'juan', age:24},
+      1: {id:2, name: 'maria', age:10}
+    }
+	
+    //convert to an array and get the sum of ages
+    const resp = Object.values(data).reduce((prev, value) => prev + value.age, 0)
+    console.log("resp:", resp)
+
+    //convert to an array and filter the person over 10, shows only IDs as array
+	  //Result: [1]
+	  const resp1 = Object.values(data).filter(p => p.age > 10).map(p => p.id)
+	  console.log("resp1", resp1)
+
+    /** ----------------------- TASK#1 ------------------------ 
     const auxMap = [1,2,3,4,5].map(num => num * 2)
     console.log("auxMap", auxMap);
     
@@ -50,5 +123,10 @@ export class AppComponent {
     const getName = (name: string, lastName:string) => lastName
     const mult = num => num *2 */
   }
+
+  //TASK#2 Rest Operator
+	getRest(...params: any[]) {
+		console.log('REST:', params)
+	}
 
 }
