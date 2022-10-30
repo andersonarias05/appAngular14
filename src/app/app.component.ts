@@ -9,8 +9,9 @@ export class AppComponent {
   title = 'cursoAngular';
 
   constructor() {
-    console.log('hi');
+    console.log('hi harry');
     
+    /** ----------------------- TASK#2 ------------------------
     //Operator Splice
 	  const A = ['a','b','c','d','e'];
 	  const auxSplice = A.splice(1,1)
@@ -123,10 +124,9 @@ export class AppComponent {
     const getName = (name: string, lastName:string) => lastName
     const mult = num => num *2 */
   }
-
-  //TASK#2 Rest Operator
+  
 	getRest(...params: any[]) {
 		console.log('REST:', params)
-	}
+	} //TASK#2 Rest Operator
 
 }
