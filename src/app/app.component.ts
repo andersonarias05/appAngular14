@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'cursoAngular';
 
+  getPrint(event:string) {
+    console.log(event);
+  }
+
   constructor() {
     console.log('hi harry');
     
