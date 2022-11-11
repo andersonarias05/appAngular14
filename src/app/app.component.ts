@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IPerson } from './person/person.model';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cursoAngular';
+  public person!: IPerson;
+  //public person: IPerson = { name: '', lastName: '', age: 0 };
 
+  getPrint(event:IPerson) {
+    console.log('Hi parent component:', event);
+    this.person = event;
+  }
+  /*
   getPrint(event:string) {
     console.log(event);
-  }
+  }*/
 
   constructor() {
     console.log('hi harry');

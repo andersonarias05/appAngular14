@@ -1,12 +1,18 @@
 <p>ANGULAR</p>
 <app-my-first></app-my-first>
 
+<app-person name="'Maria'" lastName="'Perez'" [age]="0" (print)="getPrint($event)"></app-person>
+<p>{{person?.name}}</p>
+<p>{{person?.lastName}}</p>
+<p>{{person?.age}}</p>
+
+<!--
 <app-person></app-person>
 <app-person [name]="title" lastName="'test'" [age]="0"></app-person>
 <app-person [name]="'Ana'" lastName="'TEST'" [age]="25"></app-person>
 <app-person name="'Maria'" lastName="'TEST'" [age]="30" (print)="getPrint($event)"></app-person>
 
-<!--
+
   [ ] => codigo typescript
   name= "concatena variable"
 -->
