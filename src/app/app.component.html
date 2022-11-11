@@ -6,6 +6,19 @@
 <p>{{person?.lastName}}</p>
 <p>{{person?.age}}</p>
 
+<input type="text" [(ngModel)]="student">
+<p>{{student}}</p>
+
+<input type="number" [(ngModel)]="a">
+<input type="number" [(ngModel)]="b">
+<p>{{a+b}}</p>
+
+lastName<input type="text" ngModel (ngModelChange)="getLastName($event)">
+
+Name<input type="text" #name>
+<button (click)="printName(name)">Print Name</button>
+
+
 <!--
 <app-person></app-person>
 <app-person [name]="title" lastName="'test'" [age]="0"></app-person>

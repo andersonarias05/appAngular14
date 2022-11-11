@@ -9,7 +9,18 @@ import { IPerson } from './person/person.model';
 export class AppComponent {
   title = 'cursoAngular';
   public person!: IPerson;
+  public student: string = 'example pedro.';
+  public a = 0;
+  public b = 0;
   //public person: IPerson = { name: '', lastName: '', age: 0 };
+
+  printName(event:any) {
+    console.log('print name', name);
+  }
+
+  getLastName(event:any):void {
+    console.log('Last name', event);
+  }
 
   getPrint(event:IPerson) {
     console.log('Hi parent component:', event);
